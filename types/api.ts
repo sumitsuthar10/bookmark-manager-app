@@ -1,0 +1,17 @@
+export type ApiSuccess<T> = {
+  data: T;
+};
+
+export type ApiFailure = {
+  error: {
+    code: string;
+    message: string;
+  };
+};
+
+export type ApiResponse<T> = ApiSuccess<T> | ApiFailure;
+
+export type PaginationParams = {
+  page?: number;
+  limit?: number;
+};
